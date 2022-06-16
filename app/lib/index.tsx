@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-import { ExampleTinyFrontendProps } from "../../contract/src/props";
+import { ElyraTestProps } from "../../contract/src/props";
 import { Button } from "./button";
 import styles from "./index.module.css";
 
-const ExampleTinyFrontend: React.FC<ExampleTinyFrontendProps> = ({
+const ElyraTest: React.FC<ElyraTestProps> = ({
   name,
   onCounterChange,
 }) => {
@@ -14,33 +14,16 @@ const ExampleTinyFrontend: React.FC<ExampleTinyFrontendProps> = ({
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Hello {name}!</h1>
+      <h1 className={styles.title}>Hello {name}{name}{name}{name}!</h1>
 
       <div className={styles.descriptionContainer}>
-        <p>
+          EXAMPLE TEST EXAMPLE TEST TEST TEST EXAMPLE
+          EXAMPLE TEST EXAMPLE TEST TEST TEST EXAMPLE
+          EXAMPLE TEST EXAMPLE TEST TEST TEST EXAMPLE
           EXAMPLE TEST EXAMPLE TEST TEST TEST EXAMPLE
           <br />
           <br />
           <br />
-          I&apos;m a{" "}
-          <a
-            href="https://tiny-frontend.github.io"
-            target="_blank"
-            rel="noreferrer"
-          >
-            tiny frontend
-          </a>{" "}
-          🐰 , I was deployed from{" "}
-          <a
-            href="https://github.com/tiny-frontend/example-tiny-frontend"
-            target="_blank"
-            rel="noreferrer"
-          >
-            this git repository
-          </a>
-          . I&apos;m just a regular React component, but my implementation was
-          loaded at runtime!
-        </p>
         <p>
           You pressed my button <strong>{value} times</strong>!
         </p>
@@ -51,4 +34,4 @@ const ExampleTinyFrontend: React.FC<ExampleTinyFrontendProps> = ({
   );
 };
 
-export default ExampleTinyFrontend;
+export default ElyraTest;

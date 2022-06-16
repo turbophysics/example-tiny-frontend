@@ -8,12 +8,12 @@ import React from "react";
 import type exportedModule from "../../app/lib/index";
 import { tinyFrontendName, version } from "../package.json";
 
-export type ExampleTinyFrontendType = typeof exportedModule;
+export type ElyraTestType = typeof exportedModule;
 
-export const loadExampleTinyFrontendServer = async (
+export const loadElyraTestServer = async (
   tinyApiEndpoint: string
-): Promise<TinyFrontendServerResponse<ExampleTinyFrontendType>> =>
-  await loadTinyFrontendServer<ExampleTinyFrontendType>({
+): Promise<TinyFrontendServerResponse<ElyraTestType>> =>
+  await loadTinyFrontendServer<ElyraTestType>({
     tinyApiEndpoint,
     name: tinyFrontendName,
     contractVersion: version,
@@ -22,10 +22,10 @@ export const loadExampleTinyFrontendServer = async (
     },
   });
 
-export const loadExampleTinyFrontendClient = async (
+export const loadElyraTestClient = async (
   tinyApiEndpoint: string
-): Promise<ExampleTinyFrontendType> =>
-  await loadTinyFrontendClient<ExampleTinyFrontendType>({
+): Promise<ElyraTestType> =>
+  await loadTinyFrontendClient<ElyraTestType>({
     tinyApiEndpoint,
     name: tinyFrontendName,
     contractVersion: version,

@@ -1,6 +1,6 @@
 {
-  "name": "@tiny-frontend/example-tiny-frontend-contract",
-  "tinyFrontendName": "ExampleTinyFrontend",
+  "name": "@tiny-frontend/elyra-test-contract",
+  "tinyFrontendName": "ElyraTest",
   "version": "0.0.4",
   "scripts": {
     "dev": "vite",
@@ -11,12 +11,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/example-tiny-frontend-contract.umd.js",
-  "module": "./dist/example-tiny-frontend-contract.es.js",
+  "main": "./dist/elyra-test-contract.umd.js",
+  "module": "./dist/elyra-test-contract.es.js",
   "exports": {
     ".": {
-      "import": "./dist/example-tiny-frontend-contract.es.js",
-      "require": "./dist/example-tiny-frontend-contract.umd.js"
+      "import": "./dist/elyra-test-contract.es.js",
+      "require": "./dist/elyra-test-contract.umd.js"
     }
   },
   "eslintConfig": {

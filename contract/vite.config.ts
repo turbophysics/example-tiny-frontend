@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: "./src/main.ts",
-      name: "exampleTinyFrontendContract",
-      fileName: (format) => `example-tiny-frontend-contract.${format}.js`,
+      name: "elyra-test-contract",
+      fileName: (format) => `elyra-test-contract.${format}.js`,
     },
     rollupOptions: {
       ...rollupExternals,

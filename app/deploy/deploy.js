@@ -20,7 +20,7 @@ await deployBundle({
   name: tinyFrontendName,
   contractVersion: version,
   umdBundlePath: new URL(
-    "../dist/example-tiny-frontend.umd.js",
+    "../dist/elyra-test-app.umd.js",
     import.meta.url
   ).pathname,
   cssBundlePath: new URL("../dist/style.css", import.meta.url).pathname,

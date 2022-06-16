@@ -18,6 +18,10 @@ const ExampleTinyFrontend: React.FC<ExampleTinyFrontendProps> = ({
 
       <div className={styles.descriptionContainer}>
         <p>
+          EXAMPLE TEST EXAMPLE TEST TEST TEST EXAMPLE
+          <br />
+          <br />
+          <br />
           I&apos;m a{" "}
           <a
             href="https://tiny-frontend.github.io"

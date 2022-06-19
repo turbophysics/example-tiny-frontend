@@ -19,7 +19,6 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci --legacy-peer-deps
-      - run: ./elyra-type-dec.sh
         working-directory: contract
       - run: npm ci --legacy-peer-deps
       - run: npm run deploy

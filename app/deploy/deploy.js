@@ -1,6 +1,20 @@
 import { deployBundle } from "@tiny-frontend/deploy-cloudflare";
 import dotenv from "dotenv";
 import { readFile } from "fs/promises";
+import { exec } from 'child_process'
+
+exec("../elyra-type-dec.sh", (error, stdout, stderr) => {
+  if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+  }
+  if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+  }
+  console.log(`stdout: ${stdout}`);
+});
+
 
 const contractPackageJsonPath = new URL(
   "../../contract/package.json",

@@ -7,7 +7,7 @@ on:
       - elyracanvasfinal
 defaults:
   run:
-    working-directory: contract
+    working-directory: app
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,10 +18,9 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-        working-directory: app
       - run: npm ci --legacy-peer-deps
         working-directory: contract
+      - run: npm ci --legacy-peer-deps
       - run: npm run deploy
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}

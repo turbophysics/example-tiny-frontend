@@ -1,6 +1,7 @@
 {
-  "name": "@tiny-frontend/example-tiny-frontend-contract",
-  "tinyFrontendName": "ExampleTinyFrontend",
+  "subname": "elyra-canvas-final",
+  "name": "@tiny-frontend/elyra-canvas-final-contract",
+  "tinyFrontendName": "ElyraCanvasFinal",
   "version": "0.0.4",
   "scripts": {
     "dev": "vite",
@@ -11,12 +12,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/example-tiny-frontend-contract.umd.js",
-  "module": "./dist/example-tiny-frontend-contract.es.js",
+  "main": "./dist/elyra-canvas-final-contract.umd.js",
+  "module": "./dist/elyra-canvas-final-contract.es.js",
   "exports": {
     ".": {
-      "import": "./dist/example-tiny-frontend-contract.es.js",
-      "require": "./dist/example-tiny-frontend-contract.umd.js"
+      "import": "./dist/elyra-canvas-final-contract.es.js",
+      "require": "./dist/elyra-canvas-final-contract.umd.js"
     }
   },
   "eslintConfig": {

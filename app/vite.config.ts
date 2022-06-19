@@ -11,11 +11,17 @@ export default defineConfig({
     lib: {
       entry: "./lib/index.tsx",
       name: `tinyFrontendExports.${tinyFrontendName}`,
-      fileName: (format) => `example-tiny-frontend.${format}.js`,
+      fileName: (format) => `elyra-canvas-final.${format}.js`,
       formats: ["umd"],
     },
     rollupOptions: {
       ...rollupExternals,
     },
+  },
+  server: {
+    port: 3333
+  },
+  define: {
+    "global": {},
   },
 });

@@ -1,0 +1,7 @@
+@import "carbon-components/scss/globals/scss/styles";
+@import "@elyra/canvas/src/index.scss";
+
+#app-container {
+  height: 80vh;
+	overflow: hidden;
+}

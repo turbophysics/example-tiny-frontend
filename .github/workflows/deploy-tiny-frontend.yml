@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - elyracanvasfinal
 defaults:
   run:
     working-directory: app

@@ -3,7 +3,7 @@ import fs from 'fs'
 console.log("PATCH STARTING")
 
 const replaceGlobal = async () => {
-    const buffer = await fs.promises.readFile('node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js');
+  const buffer = await fs.promises.readFile('node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js');
   const data = buffer.toString()
   const result = data.replace(/global\$1/g, 'globalObject');
   fs.writeFileSync('node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js', result);
@@ -20,6 +20,13 @@ const removeWindowOrGlobalFromOptimizeResize = async () => {
   let data = buffer.toString()
   let result = data.replace(/import window from \'window-or-global\'\;/g, '');
   fs.writeFileSync('node_modules/carbon-components-react/es/internal/OptimizedResize.js', result);
+}
+
+const removeBogusImport = async () => {
+  let buffer = await fs.promises.readFile('node_modules/react-virtualized/dist/es/WindowScroller/utils/onScroll.js');
+  let data = buffer.toString()
+  let result = data.replace(/import \{ bpfrpt_proptype_WindowScroller \} from \"\.\.\/WindowScroller\.js\"\;/g, '');
+  fs.writeFileSync('node_modules/react-virtualized/dist/es/WindowScroller/utils/onScroll.js', result);
 }
 
 const elyraTypeDec = "declare module '@elyra/canvas'";
@@ -51,6 +58,14 @@ try {
 try {
   console.log("\nRemoving window-or-global from OptimizeResize.js ..")
   removeWindowOrGlobalFromOptimizeResize()
+  console.log("Removal complete!")
+} catch (err) {
+  console.error(err);
+}
+
+try {
+  console.log("\nRemoving weird import from OnScroll.js ..")
+  removeBogusImport()
   console.log("Removal complete!")
 } catch (err) {
   console.error(err);

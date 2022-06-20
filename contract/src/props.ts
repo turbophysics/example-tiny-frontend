@@ -2,6 +2,6 @@
 //   name: string;
 //   onCounterChange?: (counter: number) => void;
 // }
-export interface ElyraCanvasProps {
+export interface ElyraCanvasFinalProps {
   name: string;
 }

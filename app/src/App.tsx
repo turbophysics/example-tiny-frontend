@@ -1,6 +1,6 @@
 // import ExampleTinyFrontend from "../lib";
-import ElyraComponent from "../lib";
+import ElyraComponentFinal from "../lib";
 
-const App = () => <ElyraComponent />;
+const App = () => <ElyraComponentFinal />;
 
 export default App;

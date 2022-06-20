@@ -14,7 +14,7 @@ const LOCALE = "en";
  * Common Canvas as a consumable component
  * for UMD in other React x.0.0 projects.
  */
-const ElyraComponent = () => {
+const ElyraComponentFinal = () => {
   const [canvasController, setCanvasController] = useState<null |
    typeof CanvasController>(null);
   const [intlMessages, setIntlMessages] = useState({});
@@ -46,7 +46,7 @@ const ElyraComponent = () => {
   );
 }
 
-export default ElyraComponent;
+export default ElyraComponentFinal;
 
 
 // import React, { useEffect, useState } from "react";

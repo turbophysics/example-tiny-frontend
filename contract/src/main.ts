@@ -4,8 +4,8 @@ import {
 } from "@tiny-frontend/client";
 import { TinyFrontendServerResponse } from "@tiny-frontend/client/dist/load.server";
 import React from "react";
-// import ResizeObserver from "../../app/node_modules/resize-observer-polyfill"
-// import CarbonComponentsReact from "../../app/node_modules/carbon-components-react"
+import ResizeObserver from "../../app/node_modules/resize-observer-polyfill"
+import CarbonComponentsReact from "carbon-components-react"
 
 import type exportedModule from "../../app/lib/index";
 import { tinyFrontendName, version } from "../package.json";
@@ -21,8 +21,8 @@ export const loadElyraCanvasServer = async (
     contractVersion: version,
     dependenciesMap: {
       react: React,
-      // resizeObserver: ResizeObserver,
-      // carbonComponentsReact: CarbonComponentsReact
+      "resize-observer-polyfill": ResizeObserver,
+      "carbon-components-react": CarbonComponentsReact
     },
   });
 
@@ -35,5 +35,7 @@ export const loadElyraCanvasClient = async (
     contractVersion: version,
     dependenciesMap: {
       react: React,
+      "resize-observer-polyfill": ResizeObserver,
+      "carbon-components-react": CarbonComponentsReact
     },
   });

@@ -34,9 +34,6 @@ const ElyraComponentFinal = () => {
 
   return (
     <IntlProvider locale={LOCALE} messages={intlMessages} defaultLocale={LOCALE}>
-      <div>
-        <h1>elyra-adaptor-vite</h1>
-      </div>
       {canvasController && (
         <div id="app-container">
           <CommonCanvas canvasController={canvasController} />

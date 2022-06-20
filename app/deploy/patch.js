@@ -71,4 +71,4 @@ try {
   console.error(err);
 }
 
-console.log("PATCH TERMINATING")
+console.log("\nPATCH TERMINATING")

@@ -10,7 +10,7 @@ import { tinyFrontendName, version } from "../package.json";
 
 export type ElyraCanvasFinalType = typeof exportedModule;
 
-export const loadElyraCanvasServer = async (
+export const loadElyraCanvasFinalServer = async (
   tinyApiEndpoint: string
 ): Promise<TinyFrontendServerResponse<ElyraCanvasFinalType>> =>
   await loadTinyFrontendServer<ElyraCanvasFinalType>({
@@ -22,7 +22,7 @@ export const loadElyraCanvasServer = async (
     },
   });
 
-export const loadElyraCanvasClient = async (
+export const loadElyraCanvasFinalClient = async (
   tinyApiEndpoint: string
 ): Promise<ElyraCanvasFinalType> =>
   await loadTinyFrontendClient<ElyraCanvasFinalType>({
